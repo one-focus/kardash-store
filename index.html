@@ -32,6 +32,7 @@
     .payment-section input[type="text"],
     .payment-section input[type="number"] {
       width: 100%;
+ 
       padding: 8px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
@@ -65,28 +66,12 @@
 
     <!-- PayPal Section -->
     <div class="payment-section">
-      <h2>Pay with PayPal</h2>
+      <
+        h2>Pay with PayPal</h2>
       <div id="paypal-button-container"></div>
     </div>
 
-    <!-- Wise Payment Link Section -->
-    <div class="payment-section">
-      <h2>Pay with Wise</h2>
-      <p>
-        <a id="wise-link" href="#" class="payment-button wise-button" target="_blank"
-          onclick="return updateLink(this, 'wise');">Proceed to Wise Payment</a>
-      </p>
-    </div>
-
-    <!-- Payoneer Payment Link Section -->
-    <div class="payment-section">
-      <h2>Pay with Payoneer</h2>
-      <p>
-        <a id="payoneer-link" href="#" class="payment-button payoneer-button" target="_blank"
-          onclick="return updateLink(this, 'payoneer');">Proceed to Payoneer Payment</a>
-      </p>
-    </div>
-  </</div>
+</</div>
   <!-- PayPal SDK: Live client ID for kardash.store -->
   <!-- Using PLN as the currency since the business operates in Poland -->
   <script src="https://www.paypal.com/sdk/js?client-id=AQ9ZM_n6KG70UfAIkeCQabWmLgKedkGqtOV0FJNWBf5N44kYw1L80kesvjm5wZmJkQD_WWsvxZnv3x3B&currency=PLN"></script>
@@ -112,24 +97,10 @@
       },
     }).render('#paypal-button-container');
 
-    function updateLink(el, type) {
-      var amount = document.getElementById('amount').value || '1.00';
-      var url;
-      if (type === 'wise') {
-        url = 'YOUR_WISE_PAYMENT_LINK';
-      } else if (type === 'payoneer') {
-        url = 'YOUR_PAYONEER_PAYMENT_LINK';
-      }
-      if (amount) {
-        if (url.includes('?')) {
-          url += '&amount=' + encodeURIComponent(amount);
-        } else {
-          url += '?amount=' + encodeURIComponent(amount);
-        }
-      }
-      el.href = url;
-      return true;
+ 
     }
   </script>
 </body>
 </html>
+
+
